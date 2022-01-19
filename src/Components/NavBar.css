@@ -1,0 +1,10 @@
+.NavBar {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: left;
+  }
+  .button{
+      background-color: green;
+      margin: right;
+  }
