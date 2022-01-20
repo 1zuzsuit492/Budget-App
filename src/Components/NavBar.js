@@ -6,13 +6,13 @@ export const NavBar = () => {
    <>
    <div className='NavBar'>
     <h1>Budget App </h1>
-    
-    <button>
+    {/* <button>
         <Link to="/new">New Transaction</Link>
-          </button>
+          </button> */}
     </div>
     </>
   );
 };
-
+//complete:
+// The Nav bar allows me to navigate to the Index and New pages
 export default NavBar;
