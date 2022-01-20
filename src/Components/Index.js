@@ -3,3 +3,12 @@
 
 //There is also an Account total visible that sums all the different expenditures and shows the user how much money they currently have.
 
+import './Index.css'
+
+export const Index = () => {
+  return (
+   <h1>Bank Account Total:</h1>
+  );
+};
+
+export default Index;

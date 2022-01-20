@@ -6,8 +6,9 @@ export const NavBar = () => {
    <>
    <div className='NavBar'>
     <h1>Budget App </h1>
+    
     <button>
-        <Link to="/new">New Button</Link>
+        <Link to="/new">New Transaction</Link>
           </button>
     </div>
     </>

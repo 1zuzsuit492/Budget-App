@@ -2,12 +2,13 @@
     background-color: #7CD2B3;
     color: white;
     display: flex;
-    justify-content: left;
+    /* justify-content: center; */
   }
   button{
-      background-color: green;
-      text-align: right;
+      position: right;
       border: 2px, black;
+      font-size: 20px;
+      text-decoration: none;
   }
   h1{
     color: black;
