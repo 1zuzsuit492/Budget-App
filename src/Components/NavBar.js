@@ -6,9 +6,7 @@ export const NavBar = () => {
    <>
    <div className='NavBar'>
     <h1>Budget App </h1>
-    {/* <button>
-        <Link to="/new">New Transaction</Link>
-          </button> */}
+        <Link style={{position: 'right'}} to="/">Home</Link>
     </div>
     </>
   );

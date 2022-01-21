@@ -50,7 +50,7 @@ h1 {
 	border-radius: 8px;
 }
 
-/* .income-form {
+ .income-form {
 	display: block;
 	margin: 15px;
 	position: relative;
@@ -162,4 +162,5 @@ h1 {
 	min-width: 125px;
 }
 .income-list .income-item:hover {
-	box-shadow: 0px 0px 6px rgba(0,0,0,0.1); */
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+}
