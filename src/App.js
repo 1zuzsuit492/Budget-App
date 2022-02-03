@@ -1,20 +1,23 @@
+import NavBar from './Components/NavBar';
+import {Route, Routes } from "react-router";
+import New from './Components/New';
+import Index from './Components/Index';
+import Edit from './Components/Edit';
+import Details from './Components/Details';
+
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <main>
+        <Routes>
+          <Route exact path="/" element={<Index />}/>
+          <Route path="/new" element={<New />}/>
+          <Route path='/details/:index' element={<Details />}/>
+          <Route path='/transactions/:index/edit' element={<Edit />}/>
+        </Routes>
+      </main>
     </div>
   );
 }

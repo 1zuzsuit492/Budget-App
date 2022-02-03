@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import './NavBar.css'
 
-export const NavBar = () => {
+const NavBar = () => {
   return (
    <>
-   <div className='NavBar'>
-    <h1>Budget App </h1>
-        <Link style={{position: 'right'}} to="/">Home</Link>
-    </div>
+   <nav className='NavBar'>
+      <h1>
+        <Link to='/'>Budget App </Link>
+      </h1>
+        <button>
+        <Link to="/transactions/new">New Transactions</Link>
+        </button>
+    </nav>
     </>
   );
 };
