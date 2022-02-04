@@ -14,7 +14,9 @@ const Index = () => {
       console.log(response.data);//see what you're fetching (response goes in transactionArr)
       setTransactionsArr(response.data);//brings in json info and puts it in state
     })
-  }, []); //[] prevents infinite loop
+  }, []); 
+  
+  //[] prevents infinite loop
 
 let balance = 0;
 transactionsArr.forEach(transaction => balance = balance + Number(transaction.amount));

@@ -26,48 +26,48 @@ function NewTransaction (){
     .then(() => navigate('/'))
   }//button posts to transactions then redirects user to homepage
 
-  return (
-    <form  onSubmit={handleSubmit} className="newItem">
-        <div>
-            <h2>Add a New Transaction</h2>
-        </div>
+return (
+<form  onSubmit={handleSubmit} className="newItem">
+  <div>
+  <h2>Add a new item</h2>
+  </div>
 
-        <div className="date">
-        <label htmlFor="date">Date</label>
-        <br />
-        <input id="date" value={transactionsArr.date} name="date" 
-        type="text" placeholder="date" onChange={handleTextChange}/>
-        </div>
+  <div className="date">
+  <label htmlFor="date">Date</label>
+  <input id="date" value={activity.date} name="date" 
+  type="text" placeholder="date" onChange={handleTextChange}/>
+  </div>
 
-        <br />
-        <div className="name">
-        <label htmlFor="name">Name</label>
-        <br />
-        <input id="name" value={transactionsArr.name} name="name" type="text" 
-        placeholder="name" onChange={handleTextChange}/>
-        </div>
+  <br />
+  <div className="name">
+  <label htmlFor="name">Name</label>
+  <input id="name" value={activity.name} name="name" 
+  type="text" placeholder="name" onChange={handleTextChange}/>
+  </div>
 
-        <br />
-        <div className="amount">
-        <label htmlFor="amount">Amount</label>
-        <br />
-        <input id="amount" value={transactionsArr.amount} name="amount" type="number" placeholder="amount" onChange={handleTextChange}/>
-        </div>
+  <br />
+  <div className="amount">
+  <label htmlFor="amount">Amount</label>
+  <input 
+  id="amount" value={activity.amount} name="amount" 
+  type="number" placeholder="amount" onChange={handleTextChange}/>
+  </div>
 
-        <br />
-        <div className="from">
-        <label htmlFor="from">From</label>
-        <br />
-        <input id="from" name="from"value={transactionsArr.from} type="text" 
-        placeholder="from" onChange={handleTextChange}/>
-        </div>
+  <br />
+  <div className="from">
+  <label htmlFor="from">From</label>
+  <br />
+  <input id="from" name="from" value={activity.from}
+  type="text" placeholder="from" onChange={handleTextChange}/>
+  </div>
 
-        <br /> 
-        <button type="submit">Submit Transaction</button>
-    
-    </form>
+  <br />
+  
+  <button type="submit">CREATE NEW ITEM</button>
+
+</form>
 )
-}
+  }
 
 
 export default NewTransaction;
