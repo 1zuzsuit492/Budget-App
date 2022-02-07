@@ -22,7 +22,7 @@ useEffect(() => {
     axios.get(`${URL}/transactions/${index}`)
     .then((response) => {
     console.log(response.data)
-    setActivity(response.data);
+    setTransactionsArr(response.data);
     })
 }, [index]);
 

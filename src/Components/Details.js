@@ -36,7 +36,7 @@ return (
         <Link to={`/transaction/${index}/edit`}>
           <button type="button" class="btn btn-primary">Edit</button>
         </Link>
-        <Link to={'/transaction/${index}/edit'}>
+        <Link to={`/transaction/${index}/edit`}>
           <button onClick={handleDelete} type="button" class="btn btn-primary">Delete</button>
         </Link>
       </div>
