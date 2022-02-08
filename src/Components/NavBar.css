@@ -2,11 +2,9 @@
     background-color: #7CD2B3;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 25px;
     margin-left: 0.5rem;
   }
 
-  h1{
-    color: black;
-  }
+

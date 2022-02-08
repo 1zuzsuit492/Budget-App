@@ -6,15 +6,15 @@ function Transaction({element, index}) { //props from fetch
             <td>
                 {element.date}
             </td>
-            <p>
+            <td>
                 <Link to={`/details/${index}`}>{element.name}</Link>
-            </p>
+            </td>
             <td>
                 {element.amount}
             </td>
 
             <td>
-            <Link to={`/transaction/${index}/edit`}>
+            <Link to={`/transactions/${index}/edit`}>
                 <button type='button' className='button'>Edit</button>
             </Link>
             </td>
@@ -30,3 +30,7 @@ function Transaction({element, index}) { //props from fetch
 //this component tells homepage what to display
 
 export default Transaction;
+
+//TROUBLESHOOTING:
+//DON'T CHANGE element.
+//made transactions plural

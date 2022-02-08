@@ -11,7 +11,7 @@ function NewTransaction (){
     date:"",
     from:"",
     amount:"",
-    category:""
+    category:"",
   }); //using states to save inputted info
 
   const handleTextChange = (event) => {
@@ -34,14 +34,14 @@ return (
 
   <div className="date">
   <label htmlFor="date">Date</label>
-  <input id="date" value={activity.date} name="date" 
+  <input id="date" value={transactionsArr.date} name="date" 
   type="text" placeholder="date" onChange={handleTextChange}/>
   </div>
 
   <br />
   <div className="name">
   <label htmlFor="name">Name</label>
-  <input id="name" value={activity.name} name="name" 
+  <input id="name" value={transactionsArr.name} name="name" 
   type="text" placeholder="name" onChange={handleTextChange}/>
   </div>
 
@@ -49,7 +49,7 @@ return (
   <div className="amount">
   <label htmlFor="amount">Amount</label>
   <input 
-  id="amount" value={activity.amount} name="amount" 
+  id="amount" value={transactionsArr.amount} name="amount" 
   type="number" placeholder="amount" onChange={handleTextChange}/>
   </div>
 
@@ -57,7 +57,7 @@ return (
   <div className="from">
   <label htmlFor="from">From</label>
   <br />
-  <input id="from" name="from" value={activity.from}
+  <input id="from" name="from" value={transactionsArr.from}
   type="text" placeholder="from" onChange={handleTextChange}/>
   </div>
 

@@ -1,166 +1,62 @@
-:root {
-	--light: #F8F8F8;
-	--dark: #313131;
-	--grey: #888;
-	--primary: #FFCE00;
-	--secondary: #FE4880;
-	--alert: #FF1E2D;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: montserrat, sans-serif;
-}
-
-input, button {
-	border: none;
-	outline: none;
-	background: none;
-}
-
-body {
-	background-color: var(--light);
-}
-
-.App {
-	padding: 30px;
-}
-
-header {
+nav {
+	background-color: #7CD2B3;
+  	background-attachment: fixed;
+	background-size: cover;
+	background-size: cover;
 	display: flex;
-	justify-content: space-between;
-	padding: 15px;
-}
+	/* justify-content: space-between; */
+	align-items: center;
+	padding: 1em;
+	box-shadow: 2px 2px 4px grey;
+	margin-bottom: 1em;
+	font-size: large;
+  }
+  
+  main {
+	width: 90%;
+	margin: auto;
+  }
+  
+  a {
+	text-decoration: none;
+	color: #000000;
+  }
 
-h1 {
-	color: var(--grey);
-	font-size: 32px;
-	font-weight: 600;
-	text-align: left;
-}
-
-.total-income {
-	color: var(--grey);
-	font-size: 28px;
-	font-weight: 900;
-	background-color: #DFDFDF;
-	padding: 5px 25px;
-	border-radius: 8px;
-}
-
- .income-form {
+  table {
+	width: 50%;
+	margin: auto;
+  }
+  
+  td {
+	text-align: center;
+  }
+  
+  tbody td:not(td:first-of-type):hover {
+	transform: scale(1.05);
+	opacity: 0.9;
+	font-weight: bold;
+  }
+  
+  tbody tr:nth-child(even) {
+	background: #7CD2B3;
+  }
+  
+  .New form {
+	margin: auto;
+	width: 95%;
+  }
+  
+  input[type],
+  textarea {
 	display: block;
-	margin: 15px;
-	position: relative;
-}
+	width: 90%;
+	margin: auto;
+  }
+  
+  input[type="submit"] {
+	width: 30%;
+  }
 
-.income-form:after {
-	content: "";
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	z-index: 0;
-	background-image: linear-gradient(to right, var(--primary), var(--secondary));
-	border-radius: 10px;
-	transition: 0.2s;
-}
-
-.income-form:focus-within:after {
-	top: -3px;
-	left: -3px;
-	right: -3px;
-	bottom: -3px;
-}
-.form-inner {
-	position: relative;
-	z-index: 1;
-	display: flex;
-	justify-content: center;
-	transition: 0.4s;
-	border-radius: 8px;
-}
-.form-inner input {
-	font-size: 18px;
-	padding: 10px 15px;
-	background-color: #FFF;
-}
-
-.form-inner input[type="text"] {
-	border-radius: 8px 0px 0px 8px;
-	flex: 1 1 100%;
-}
-.form-inner input[type="date"] {
-	border-radius: 0px;
-	min-width: 200px;
-}
-.form-inner input[type="submit"] {
-	border-radius: 0px 8px 8px 0px;
-	cursor: pointer;
-	
-	background-image: linear-gradient(to right, var(--primary) 50%, var(--primary) 50%, var(--secondary));
-	background-size: 200%;
-	background-position: 0%;
-
-	color: var(--dark);
-	font-weight: 600;
-	text-transform: uppercase;
-
-	transition: 0.4s;
-}
-
-.form-inner input[type="submit"]:hover {
-	background-position: 100%;
-	color: #FFF;
-}
-
-.income-list {
-	padding: 15px;
-}
-
-.income-list .income-item {
-	position: relative;
-	padding: 10px 15px;
-	background-color: #FFF;
-	border-radius: 8px;
-	margin-bottom: 15px;
-	display: flex;
-	transition: 0.4s;
-	padding-left: 75px;
-}
-
-.income-list .income-item .remove-item {
-	position: absolute;
-	width: 0;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	overflow: hidden;
-
-	cursor: pointer;
-	display: block;
-	color: var(--light);
-	font-weight: 600;
-	background-color: var(--alert);
-	border-radius: 8px 0px 0px 8px;
-	transition: 0.2s;
-}
-
-.income-list .income-item:hover .remove-item {
-	width: 50px;
-}
-
-.income-list .income-item .desc {
-	flex: 1 1 100%;
-}
-
-.income-list .income-item .price,
-.income-list .income-item .date {
-	min-width: 125px;
-}
-.income-list .income-item:hover {
-	box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
-}
+  h1 {
+	  text-align: center;
+  }

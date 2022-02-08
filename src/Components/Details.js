@@ -11,7 +11,7 @@ function TransactionDetails (){
 
 useEffect(() => {
 //make a get request to http://localhost:3001/bookmarks/:index
-axios.get(`${URL}/transactions${index}`)
+axios.get(`${URL}/transactions/${index}`) // missing /
 .then((response) => setTransactionsArr(response.data));
 }, []); 
 
@@ -27,23 +27,26 @@ return (
       <h3>Transaction Date</h3> 
       <p>{transactionsArr.date}</p>
       <h3>Category</h3>
-      <p>{transactionsArr.category}</p>
+      <p>{transactionsArr.source}</p>
       <br />
-      <div class="btn-group" role="group" aria-label="Basic example">
+      <div className="btn-group" role="group" aria-label="Basic example">
         <Link to={'/'}>
-          <button type="button" class="btn btn-primary">Back</button>
+          <button type="button" className="back-btn">Back</button>
         </Link> {/*redirect user to home pg */}
-        <Link to={`/transaction/${index}/edit`}>
-          <button type="button" class="btn btn-primary">Edit</button>
+        <Link to={`/transactions/${index}/edit`}>
+          <button type="button" className="edit-btn">Edit</button>
         </Link>
-        <Link to={'/transaction/${index}/edit'}>
-          <button onClick={handleDelete} type="button" class="btn btn-primary">Delete</button>
+        <Link to={`/transaction/${index}/edit`}>
+          <button onClick={handleDelete} type="button" className="delete-btn">Delete</button>
         </Link>
       </div>
     </article>
   );
 }
 
-
+//change: line 32 class to className
+//changed: line 36 error, missing / and missing s
+//changing classnames for css purposes
+//changed category to source
 
 export default TransactionDetails;

@@ -11,15 +11,20 @@ function App() {
     <div className="App">
       <NavBar/>
       <main>
+        {/* <Router> */}
         <Routes>
           <Route exact path="/" element={<Index />}/>
-          <Route path="/new" element={<New />}/>
+          <Route path="transactions/new" element={<New />}/>
           <Route path='/details/:index' element={<Details />}/>
           <Route path='/transactions/:index/edit' element={<Edit />}/>
         </Routes>
+        {/* </Router> */}
       </main>
     </div>
   );
 }
 
 export default App;
+
+//removed router from app.js
+//made changes to line 17
