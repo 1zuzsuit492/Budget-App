@@ -1,16 +1,16 @@
 import {Link} from 'react-router-dom';
 //display transaction on homepage 
-function Transaction({element, index}) { //props from fetch
+function Transaction({transaction, index}) { //props from fetch
     return (
         <tr>
             <td>
-                {element.date}
+                {transaction.date}
             </td>
             <td>
                 <Link to={`/details/${index}`}>{element.name}</Link>
             </td>
             <td>
-                {element.amount}
+                {transaction.amount}
             </td>
 
             <td>
@@ -24,7 +24,7 @@ function Transaction({element, index}) { //props from fetch
 //tr = table row
 
 //map through the fetched data thats getting stored in state
-//element = each index of the array [transaction]
+//transaction = each index of the array [transaction]
 //name of transaction will route you to another component that shows transaction details [line10]
 
 //this component tells homepage what to display

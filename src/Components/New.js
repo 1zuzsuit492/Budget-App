@@ -6,25 +6,29 @@ function NewTransaction (){
   const URL = process.env.REACT_APP_API_URL;
   const navigate = useNavigate(); //If you need to navigate programmatically (like after a form submits), this hook gives you an API to do so
 
-  const [transactionsArr, setTransactionsArr] = useState({
-    name:"",
+  const [transaction, setTransaction] = useState({
+    item_name:"",
     date:"",
     from:"",
     amount:"",
-    category:"",
+    source:"",
   }); //using states to save inputted info
 
   const handleTextChange = (event) => {
-    setTransactionsArr({...transactionsArr, [event.target.id]: event.target.value})
+    setTransaction({...transaction, [event.target.id]: event.target.value})
   } //spread op allows you to not lose any info stored in state
-    //event.target.value = user input
-
+    //event.target.value = user inputt
 
   const handleSubmit = (event) => {
     event.preventDefault(); //prevent autoreload
-    axios.post(`${URL}/transactions`, transactionsArr)
+    axios.post(`${URL}/transactions`, transaction)
     .then(() => navigate('/'))
   }//button posts to transactions then redirects user to homepage
+
+  const addTransaction = (newTransaction) => {
+    axios.post(`${URL}/transactions`, newTransaction)
+    .then(() => navigate("/transactions"));
+  };
 
 return (
 <form  onSubmit={handleSubmit} className="newItem">
