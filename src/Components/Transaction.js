@@ -1,16 +1,16 @@
 import {Link} from 'react-router-dom';
 //display transaction on homepage 
-function Transaction({transaction, index}) { //props from fetch
+function Transaction({element, index}) { //props from fetch
     return (
         <tr>
             <td>
-                {transaction.date}
+                {element.date}
             </td>
-            <td>
+           <td>
                 <Link to={`/details/${index}`}>{element.name}</Link>
             </td>
             <td>
-                {transaction.amount}
+                {element.amount}
             </td>
 
             <td>

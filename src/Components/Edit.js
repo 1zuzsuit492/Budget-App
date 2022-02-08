@@ -18,13 +18,13 @@ function TransactionEdit() {
         setTransactionsArr({ ...transactionsArr, [event.target.id]: event.target.value });
     };
 
-    useEffect(() => {
-        axios.get(`${URL}/transactions/${index}`)
-            .then((response) => {
-                console.log(response.data)
-                setTransactionsArr(response.data);
-            })
-    }, [index]);
+useEffect(() => {
+    axios.get(`${URL}/transactions/${index}`)
+    .then((response) => {
+    console.log(response.data)
+    setTransactionsArr(response.data);
+    })
+}, [index]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
